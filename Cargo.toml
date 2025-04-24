@@ -1,0 +1,22 @@
+[package]
+name = "wasmsnake"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[build]
+RUSTFLAGS="--cfg=web_sys_unstable_apis"
+
+[dependencies]
+speedy2d = {version = "2.1.0" }
+rand = { version = "0.8", features = ["getrandom"] }
+getrandom = { version = "0.2", features = ["js"] }
+wasm-bindgen = "=0.2.89"
+web-sys = { version = "=0.3.66", features = ["Window", "Document", "console"] }
+log = "0.4.27"
+wasm-logger = "0.2"
+console_error_panic_hook = "0.1.6"
+
+

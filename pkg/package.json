@@ -1,0 +1,15 @@
+{
+  "name": "wasmsnake",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "wasmsnake_bg.wasm",
+    "wasmsnake.js",
+    "wasmsnake.d.ts"
+  ],
+  "main": "wasmsnake.js",
+  "types": "wasmsnake.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
